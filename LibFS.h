@@ -12,6 +12,8 @@
 
 // gestion des erreurs
 extern int osErrno;
+
+#define MAGIC_NUMBER 666
     
 // error types - 
 typedef enum {
@@ -28,6 +30,11 @@ typedef enum {
     E_DIR_NOT_EMPTY,
     E_ROOT_DIR,
 } FS_Error_t;
+
+typedef struct _superbloc{
+    char unused[508];
+    int magicNumber;
+}Superbloc;
     
 int FS_Boot(char *path);
 int FS_Sync();

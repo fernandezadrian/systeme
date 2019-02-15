@@ -40,8 +40,9 @@ int Disk_Save(char* file);
 int Disk_Load(char* file);
 //ecriture d un secteur; attention, il faut faire un save pour persister les donnees
 int Disk_Write(int sector, char* buffer);
-int Disk_Read(int sector, char* buffer);
 //lecture d'un secteur a partir d'un secteur
+int Disk_Read(int sector, char* buffer);
+
 
 #endif // __Disk_H__
 // Credits Andrea C. Arpaci-Dusseau
